@@ -410,50 +410,36 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiTestTest extends Struct.SingleTypeSchema {
-  collectionName: 'tests';
+export interface ApiLuxurycarAboutusLuxurycarAboutus
+  extends Struct.SingleTypeSchema {
+  collectionName: 'luxurycar_aboutuses';
   info: {
-    displayName: 'test';
-    pluralName: 'tests';
-    singularName: 'test';
+    displayName: 'luxurycar_aboutus';
+    pluralName: 'luxurycar-aboutuses';
+    singularName: 'luxurycar-aboutus';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
+    AddressDesc: Schema.Attribute.Text;
+    addressTitle: Schema.Attribute.String;
+    contactUsDesc: Schema.Attribute.Text;
+    contactUsTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    emailDesc: Schema.Attribute.Text;
+    emailTitle: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::test.test'> &
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::luxurycar-aboutus.luxurycar-aboutus'
+    > &
       Schema.Attribute.Private;
+    phoneDesc: Schema.Attribute.Text;
+    phoneTitle: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    test: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiTest2Test2 extends Struct.SingleTypeSchema {
-  collectionName: 'test2s';
-  info: {
-    displayName: 'test2';
-    pluralName: 'test2s';
-    singularName: 'test2';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::test2.test2'> &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    test: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -970,8 +956,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::test.test': ApiTestTest;
-      'api::test2.test2': ApiTest2Test2;
+      'api::luxurycar-aboutus.luxurycar-aboutus': ApiLuxurycarAboutusLuxurycarAboutus;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

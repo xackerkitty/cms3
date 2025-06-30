@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "luxurycar_aboutuses",
+  "info": {
+    "singularName": "luxurycar-aboutus",
+    "pluralName": "luxurycar-aboutuses",
+    "displayName": "luxurycar_aboutus"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contactUsTitle": {
+      "type": "string"
+    },
+    "contactUsDesc": {
+      "type": "text"
+    },
+    "addressTitle": {
+      "type": "string"
+    },
+    "AddressDesc": {
+      "type": "text"
+    },
+    "phoneTitle": {
+      "type": "string"
+    },
+    "phoneDesc": {
+      "type": "text"
+    },
+    "emailTitle": {
+      "type": "string"
+    },
+    "emailDesc": {
+      "type": "text"
+    }
+  }
+}
