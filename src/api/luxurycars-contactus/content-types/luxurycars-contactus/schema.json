@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "luxurycar_aboutuses",
+  "collectionName": "luxurycars_contactuses",
   "info": {
-    "singularName": "luxurycar-aboutus",
-    "pluralName": "luxurycar-aboutuses",
-    "displayName": "luxurycar_aboutus"
+    "singularName": "luxurycars-contactus",
+    "pluralName": "luxurycars-contactuses",
+    "displayName": "luxurycars_contactus"
   },
   "options": {
     "draftAndPublish": true
@@ -33,7 +33,7 @@
       "type": "string"
     },
     "emailDesc": {
-      "type": "text"
+      "type": "string"
     }
   }
 }

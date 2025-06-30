@@ -410,13 +410,13 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiLuxurycarAboutusLuxurycarAboutus
+export interface ApiLuxurycarsContactusLuxurycarsContactus
   extends Struct.SingleTypeSchema {
-  collectionName: 'luxurycar_aboutuses';
+  collectionName: 'luxurycars_contactuses';
   info: {
-    displayName: 'luxurycar_aboutus';
-    pluralName: 'luxurycar-aboutuses';
-    singularName: 'luxurycar-aboutus';
+    displayName: 'luxurycars_contactus';
+    pluralName: 'luxurycars-contactuses';
+    singularName: 'luxurycars-contactus';
   };
   options: {
     draftAndPublish: true;
@@ -429,12 +429,12 @@ export interface ApiLuxurycarAboutusLuxurycarAboutus
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    emailDesc: Schema.Attribute.Text;
+    emailDesc: Schema.Attribute.String;
     emailTitle: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::luxurycar-aboutus.luxurycar-aboutus'
+      'api::luxurycars-contactus.luxurycars-contactus'
     > &
       Schema.Attribute.Private;
     phoneDesc: Schema.Attribute.Text;
@@ -956,7 +956,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::luxurycar-aboutus.luxurycar-aboutus': ApiLuxurycarAboutusLuxurycarAboutus;
+      'api::luxurycars-contactus.luxurycars-contactus': ApiLuxurycarsContactusLuxurycarsContactus;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
