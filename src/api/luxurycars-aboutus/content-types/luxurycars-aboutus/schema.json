@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "luxurycars_aboutuses",
+  "info": {
+    "singularName": "luxurycars-aboutus",
+    "pluralName": "luxurycars-aboutuses",
+    "displayName": "luxurycars_aboutus"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    }
+  }
+}
