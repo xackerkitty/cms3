@@ -30,6 +30,10 @@
     "mainDesc": {
       "type": "text"
     },
+    "buttonTxt": {
+      "type": "string",
+      "default": "Discover Our Website"
+    },
     "contactTitle": {
       "type": "string"
     },

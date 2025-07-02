@@ -5,8 +5,13 @@
   },
   "options": {},
   "attributes": {
-    "type_of_contact": {
-      "type": "string"
+    "contact_type": {
+      "type": "enumeration",
+      "enum": [
+        "Email",
+        "Location",
+        "Phone"
+      ]
     },
     "contact_detail": {
       "type": "string"

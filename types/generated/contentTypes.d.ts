@@ -421,6 +421,8 @@ export interface ApiCompanyCompany extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    buttonTxt: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Discover Our Website'>;
     companyLogo: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
