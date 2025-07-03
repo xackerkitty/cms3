@@ -441,6 +441,7 @@ export interface ApiCompanyCompany extends Struct.CollectionTypeSchema {
     mainDesc: Schema.Attribute.Text;
     mainTitle: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'companyName'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

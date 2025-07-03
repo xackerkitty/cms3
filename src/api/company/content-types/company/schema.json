@@ -41,6 +41,10 @@
       "type": "component",
       "component": "contact-info.contact-info",
       "repeatable": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "companyName"
     }
   }
 }
