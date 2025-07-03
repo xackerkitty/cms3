@@ -45,6 +45,16 @@
     "slug": {
       "type": "uid",
       "targetField": "companyName"
+    },
+    "mainBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

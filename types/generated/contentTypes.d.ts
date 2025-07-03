@@ -438,6 +438,9 @@ export interface ApiCompanyCompany extends Struct.CollectionTypeSchema {
       'api::company.company'
     > &
       Schema.Attribute.Private;
+    mainBanner: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     mainDesc: Schema.Attribute.Text;
     mainTitle: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
