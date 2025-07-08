@@ -436,7 +436,9 @@ export interface ApiLuxurycarsAboutusLuxurycarsAboutus
     CTA_title: Schema.Attribute.String;
     JourneyDesc: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<'At Lusso Luxury Car, we are committed to delivering high-quality, reliable, and eco-friendly luxury vehicles that combine elegance with advanced performance. Since our launch in 2023, we\u2019ve focused on redefining automotive passion through innovative design and modern technology. Each Lusso model is crafted to offer a refined driving experience that reflects both style and functionality.'>;
-    JourneyIMG: Schema.Attribute.String;
+    JourneyIMG: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     JourneyTitleTxt: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Our Journey of Passion and Precision'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

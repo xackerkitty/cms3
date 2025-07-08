@@ -41,9 +41,6 @@
       "type": "text",
       "default": "At Lusso Luxury Car, we are committed to delivering high-quality, reliable, and eco-friendly luxury vehicles that combine elegance with advanced performance. Since our launch in 2023, we’ve focused on redefining automotive passion through innovative design and modern technology. Each Lusso model is crafted to offer a refined driving experience that reflects both style and functionality."
     },
-    "JourneyIMG": {
-      "type": "string"
-    },
     "ourValues": {
       "type": "component",
       "component": "lc-au-our-values.about-us-values",
@@ -72,6 +69,16 @@
     },
     "CTA_buttonTxt": {
       "type": "string"
+    },
+    "JourneyIMG": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
