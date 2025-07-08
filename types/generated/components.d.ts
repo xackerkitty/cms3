@@ -7,7 +7,9 @@ export interface ContactInfoContactInfo extends Struct.ComponentSchema {
   };
   attributes: {
     contact_detail: Schema.Attribute.String;
-    contact_type: Schema.Attribute.Enumeration<['Email', 'Location', 'Phone']>;
+    contact_type: Schema.Attribute.Enumeration<
+      ['Email', 'Location', 'Phone', 'Instagram', 'Facebook', 'Tiktok']
+    >;
   };
 }
 

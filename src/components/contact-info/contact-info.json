@@ -10,7 +10,10 @@
       "enum": [
         "Email",
         "Location",
-        "Phone"
+        "Phone",
+        "Instagram",
+        "Facebook",
+        "Tiktok"
       ]
     },
     "contact_detail": {
