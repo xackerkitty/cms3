@@ -12,7 +12,57 @@
   "pluginOptions": {},
   "attributes": {
     "mainTitle": {
+      "type": "string",
+      "default": "Driving Excellence, Defining Luxury"
+    },
+    "mainDesc": {
+      "type": "text",
+      "default": "Connect with our team today to begin your journey with Luxury Lanes."
+    },
+    "mainBGImg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "buttonTxt": {
+      "type": "string",
+      "default": "Explore Our Legacy"
+    },
+    "JourneyTitleTxt": {
+      "type": "string",
+      "default": "Our Journey of Passion and Precision"
+    },
+    "JourneyDesc": {
+      "type": "text",
+      "default": "At Lusso Luxury Car, we are committed to delivering high-quality, reliable, and eco-friendly luxury vehicles that combine elegance with advanced performance. Since our launch in 2023, we’ve focused on redefining automotive passion through innovative design and modern technology. Each Lusso model is crafted to offer a refined driving experience that reflects both style and functionality."
+    },
+    "JourneyIMG": {
       "type": "string"
+    },
+    "ourValues": {
+      "type": "component",
+      "component": "lc-au-our-values.about-us-values",
+      "repeatable": true
+    },
+    "whyUs": {
+      "type": "component",
+      "component": "lc-au-why-us.about-us-why-choose-us",
+      "repeatable": false
+    },
+    "whyUsImg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

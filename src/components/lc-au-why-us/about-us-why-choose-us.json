@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_lc_au_why_us_about_us_why_choose_uses",
+  "info": {
+    "displayName": "About us - why choose us"
+  },
+  "options": {},
+  "attributes": {
+    "whyUsTitle": {
+      "type": "string"
+    },
+    "whyUsDesc": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

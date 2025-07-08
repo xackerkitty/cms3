@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_lc_au_our_values_about_us_values",
+  "info": {
+    "displayName": "About us values",
+    "icon": "handHeart"
+  },
+  "options": {},
+  "attributes": {
+    "valueTitle": {
+      "type": "string"
+    },
+    "valueDesc": {
+      "type": "text"
+    },
+    "valueImg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

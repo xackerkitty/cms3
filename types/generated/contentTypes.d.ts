@@ -426,20 +426,40 @@ export interface ApiLuxurycarsAboutusLuxurycarsAboutus
     draftAndPublish: true;
   };
   attributes: {
+    buttonTxt: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Explore Our Legacy'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    JourneyDesc: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'At Lusso Luxury Car, we are committed to delivering high-quality, reliable, and eco-friendly luxury vehicles that combine elegance with advanced performance. Since our launch in 2023, we\u2019ve focused on redefining automotive passion through innovative design and modern technology. Each Lusso model is crafted to offer a refined driving experience that reflects both style and functionality.'>;
+    JourneyIMG: Schema.Attribute.String;
+    JourneyTitleTxt: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Our Journey of Passion and Precision'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::luxurycars-aboutus.luxurycars-aboutus'
     > &
       Schema.Attribute.Private;
-    mainTitle: Schema.Attribute.String;
+    mainBGImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    mainDesc: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Connect with our team today to begin your journey with Luxury Lanes.'>;
+    mainTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Driving Excellence, Defining Luxury'>;
+    ourValues: Schema.Attribute.Component<
+      'lc-au-our-values.about-us-values',
+      true
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    whyUs: Schema.Attribute.Component<
+      'lc-au-why-us.about-us-why-choose-us',
+      false
+    >;
+    whyUsImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
