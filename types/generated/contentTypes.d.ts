@@ -390,7 +390,7 @@ export interface ApiCompanyCompany extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     companyName: Schema.Attribute.String;
-    contactInfo: Schema.Attribute.Component<'contact-info.contact-info', false>;
+    contactInfo: Schema.Attribute.Component<'contact-info.contact-info', true>;
     contactTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

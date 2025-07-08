@@ -40,7 +40,7 @@
     "contactInfo": {
       "type": "component",
       "component": "contact-info.contact-info",
-      "repeatable": false
+      "repeatable": true
     },
     "slug": {
       "type": "uid",
