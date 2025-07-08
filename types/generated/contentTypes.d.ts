@@ -431,6 +431,9 @@ export interface ApiLuxurycarsAboutusLuxurycarsAboutus
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    CTA_buttonTxt: Schema.Attribute.String;
+    CTA_Desc: Schema.Attribute.String;
+    CTA_title: Schema.Attribute.String;
     JourneyDesc: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<'At Lusso Luxury Car, we are committed to delivering high-quality, reliable, and eco-friendly luxury vehicles that combine elegance with advanced performance. Since our launch in 2023, we\u2019ve focused on redefining automotive passion through innovative design and modern technology. Each Lusso model is crafted to offer a refined driving experience that reflects both style and functionality.'>;
     JourneyIMG: Schema.Attribute.String;
@@ -457,7 +460,7 @@ export interface ApiLuxurycarsAboutusLuxurycarsAboutus
       Schema.Attribute.Private;
     whyUs: Schema.Attribute.Component<
       'lc-au-why-us.about-us-why-choose-us',
-      false
+      true
     >;
     whyUsImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };

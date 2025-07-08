@@ -52,7 +52,7 @@
     "whyUs": {
       "type": "component",
       "component": "lc-au-why-us.about-us-why-choose-us",
-      "repeatable": false
+      "repeatable": true
     },
     "whyUsImg": {
       "type": "media",
@@ -63,6 +63,15 @@
         "videos",
         "audios"
       ]
+    },
+    "CTA_title": {
+      "type": "string"
+    },
+    "CTA_Desc": {
+      "type": "string"
+    },
+    "CTA_buttonTxt": {
+      "type": "string"
     }
   }
 }
