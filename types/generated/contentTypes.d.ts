@@ -477,13 +477,50 @@ export interface ApiLuxurycarsCarLuxurycarsCar
     singularName: 'luxurycars-car';
   };
   options: {
-    comment: '';
     draftAndPublish: false;
   };
   attributes: {
+    backgroundVID: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    brandLogo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    carBrand: Schema.Attribute.Enumeration<
+      [
+        'Audi',
+        'BMW',
+        'Ferrari',
+        'Lamborghini',
+        'Mercedes-Benz',
+        'Porsche',
+        'Rolls-Royce',
+      ]
+    >;
+    carDesc: Schema.Attribute.Text;
+    carDisplay: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    carEngineDesc: Schema.Attribute.String;
+    carFuelEconomyRange: Schema.Attribute.Text;
+    carName: Schema.Attribute.String;
+    carOverviewP1: Schema.Attribute.Text;
+    carOverviewP2: Schema.Attribute.Text;
+    carPic: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    carPrice: Schema.Attribute.String;
+    carSliderImg: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    carSold: Schema.Attribute.Boolean;
+    carSpecifications: Schema.Attribute.Component<
+      'lc-cars-specifications.car-speficiations',
+      false
+    >;
+    carSuspension: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    galleryIMGs: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -491,6 +528,7 @@ export interface ApiLuxurycarsCarLuxurycarsCar
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'carName'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -551,9 +589,12 @@ export interface ApiLuxurycarsHomeLuxurycarsHome
     aboutUsBackground: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    aboutusBtnText: Schema.Attribute.String;
-    aboutUsDesc: Schema.Attribute.Text;
-    aboutUsTitle: Schema.Attribute.String;
+    aboutusBtnText: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Get To Know Us'>;
+    aboutUsDesc: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'We are a group of skilled automotive professionals who are car enthusiasts and creatives, and we specialize in helping you as a customer with a comprehensive understanding of all questions related to cars. For the selection of a new car insurance policy or appropriate financing, you can always contact us'>;
+    aboutUsTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'About Us'>;
     carImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -568,13 +609,18 @@ export interface ApiLuxurycarsHomeLuxurycarsHome
       'api::luxurycars-home.luxurycars-home'
     > &
       Schema.Attribute.Private;
-    locationDesc: Schema.Attribute.Text;
-    locationTitle: Schema.Attribute.String;
+    locationDesc: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'274 David Agmashenebeli Alley 41, Tbilisi 0131'>;
+    locationTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Find Us Here!'>;
     mainBG: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    mainBtnText: Schema.Attribute.String;
-    mainTitle: Schema.Attribute.String;
+    mainBtnText: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Learn more'>;
+    mainTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Welcome to '>;
     publishedAt: Schema.Attribute.DateTime;
-    subTitle: Schema.Attribute.String;
+    subTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Experience the Pinnnnnnacle of Luxury'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

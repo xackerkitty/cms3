@@ -1,4 +1,3 @@
-
 {
   "kind": "collectionType",
   "collectionName": "luxurycars_cars",
@@ -8,7 +7,111 @@
     "displayName": "luxurycars_car"
   },
   "options": {
-    "comment": ""
+    "draftAndPublish": false
   },
-  "attributes": {}
+  "pluginOptions": {},
+  "attributes": {
+    "carName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "carName"
+    },
+    "carDisplay": {
+      "type": "boolean",
+      "default": false
+    },
+    "backgroundVID": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "carBrand": {
+      "type": "enumeration",
+      "enum": [
+        "Audi",
+        "BMW",
+        "Ferrari",
+        "Lamborghini",
+        "Mercedes-Benz",
+        "Porsche",
+        "Rolls-Royce"
+      ]
+    },
+    "brandLogo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "carPic": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "carPrice": {
+      "type": "string"
+    },
+    "carSold": {
+      "type": "boolean"
+    },
+    "carDesc": {
+      "type": "text"
+    },
+    "carSliderImg": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "carOverviewP1": {
+      "type": "text"
+    },
+    "carOverviewP2": {
+      "type": "text"
+    },
+    "carEngineDesc": {
+      "type": "string"
+    },
+    "carFuelEconomyRange": {
+      "type": "text"
+    },
+    "carSuspension": {
+      "type": "text"
+    },
+    "carSpecifications": {
+      "type": "component",
+      "component": "lc-cars-specifications.car-speficiations",
+      "repeatable": false
+    },
+    "galleryIMGs": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
 }

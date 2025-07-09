@@ -12,13 +12,16 @@
   "pluginOptions": {},
   "attributes": {
     "mainTitle": {
-      "type": "string"
+      "type": "string",
+      "default": "Welcome to "
     },
     "subTitle": {
-      "type": "string"
+      "type": "string",
+      "default": "Experience the Pinnnnnnacle of Luxury"
     },
     "mainBtnText": {
-      "type": "string"
+      "type": "string",
+      "default": "Learn more"
     },
     "mainBG": {
       "type": "media",
@@ -36,13 +39,16 @@
       "repeatable": true
     },
     "aboutUsTitle": {
-      "type": "string"
+      "type": "string",
+      "default": "About Us"
     },
     "aboutUsDesc": {
-      "type": "text"
+      "type": "text",
+      "default": "We are a group of skilled automotive professionals who are car enthusiasts and creatives, and we specialize in helping you as a customer with a comprehensive understanding of all questions related to cars. For the selection of a new car insurance policy or appropriate financing, you can always contact us"
     },
     "aboutusBtnText": {
-      "type": "string"
+      "type": "string",
+      "default": "Get To Know Us"
     },
     "carImg": {
       "type": "media",
@@ -65,10 +71,12 @@
       ]
     },
     "locationTitle": {
-      "type": "string"
+      "type": "string",
+      "default": "Find Us Here!"
     },
     "locationDesc": {
-      "type": "text"
+      "type": "text",
+      "default": "274 David Agmashenebeli Alley 41, Tbilisi 0131"
     }
   }
 }

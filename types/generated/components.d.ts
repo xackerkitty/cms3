@@ -51,6 +51,26 @@ export interface LcAuWhyUsAboutUsWhyChooseUs extends Struct.ComponentSchema {
   };
 }
 
+export interface LcCarsSpecificationsCarSpeficiations
+  extends Struct.ComponentSchema {
+  collectionName: 'components_lc_cars_specifications_car_speficiations';
+  info: {
+    displayName: 'car speficiations';
+    icon: 'folder';
+  };
+  attributes: {
+    exteriorColor: Schema.Attribute.String;
+    fuelType: Schema.Attribute.String;
+    gear: Schema.Attribute.String;
+    interiorColor: Schema.Attribute.String;
+    mileage: Schema.Attribute.String;
+    owners: Schema.Attribute.String;
+    power: Schema.Attribute.String;
+    regYear: Schema.Attribute.Text;
+    year: Schema.Attribute.Text;
+  };
+}
+
 export interface LcHomeFeaturedCarsFeaturedCars extends Struct.ComponentSchema {
   collectionName: 'components_lc_home_featured_cars_featured_cars';
   info: {
@@ -84,6 +104,7 @@ declare module '@strapi/strapi' {
       'lc-au-cards.gallery-image-cards': LcAuCardsGalleryImageCards;
       'lc-au-our-values.about-us-values': LcAuOurValuesAboutUsValues;
       'lc-au-why-us.about-us-why-choose-us': LcAuWhyUsAboutUsWhyChooseUs;
+      'lc-cars-specifications.car-speficiations': LcCarsSpecificationsCarSpeficiations;
       'lc-home-featured-cars.featured-cars': LcHomeFeaturedCarsFeaturedCars;
       'luxurycars-s-rcard.showroom-cards': LuxurycarsSRcardShowroomCards;
     }

@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_lc_cars_specifications_car_speficiations",
+  "info": {
+    "displayName": "car speficiations",
+    "icon": "folder"
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "text"
+    },
+    "regYear": {
+      "type": "text"
+    },
+    "owners": {
+      "type": "string"
+    },
+    "mileage": {
+      "type": "string"
+    },
+    "exteriorColor": {
+      "type": "string"
+    },
+    "interiorColor": {
+      "type": "string"
+    },
+    "gear": {
+      "type": "string"
+    },
+    "power": {
+      "type": "string"
+    },
+    "fuelType": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
