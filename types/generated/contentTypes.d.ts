@@ -649,9 +649,9 @@ export interface ApiLuxurycarsShowroomLuxurycarsShowroom
     descriptionIMG: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    discoverP1: Schema.Attribute.String &
+    discoverP1: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<'More than just a display space, our showroom is an architectural masterpiece, thoughtfully curated to reflect the prestige and innovation of every vehicle it houses. From the gleaming polished floors to the ambient, intelligent lighting, every element contributes to an atmosphere of exclusive sophistication.'>;
-    discoverp2: Schema.Attribute.String &
+    discoverp2: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<"We've designed every corner to evoke a sense of wonder and comfort, inviting you to immerse yourself in dedicated zones for personalized consultations, unwind in our luxurious private lounges, and engage with dynamic interactive displays that bring the legacy and future of our automotive masterpieces to life. This is where dreams are realized.">;
     discoverTitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'An Experience Beyond Expectations'>;
@@ -669,59 +669,6 @@ export interface ApiLuxurycarsShowroomLuxurycarsShowroom
       Schema.Attribute.DefaultTo<"At Lusso, we don't just craft automobiles; we embody a philosophy of unparalleled quality, pioneering spirit, and an enduring commitment to luxury.">;
     mainTitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Defining the Lusso Standard'>;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiTestTest extends Struct.SingleTypeSchema {
-  collectionName: 'tests';
-  info: {
-    displayName: 'test';
-    pluralName: 'tests';
-    singularName: 'test';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::test.test'> &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    test: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiTestmeowTestmeow extends Struct.CollectionTypeSchema {
-  collectionName: 'testmeows';
-  info: {
-    displayName: 'testmeow';
-    pluralName: 'testmeows';
-    singularName: 'testmeow';
-  };
-  options: {
-    comment: '';
-    draftAndPublish: false;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::testmeow.testmeow'
-    > &
-      Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1244,8 +1191,6 @@ declare module '@strapi/strapi' {
       'api::luxurycars-contactus.luxurycars-contactus': ApiLuxurycarsContactusLuxurycarsContactus;
       'api::luxurycars-home.luxurycars-home': ApiLuxurycarsHomeLuxurycarsHome;
       'api::luxurycars-showroom.luxurycars-showroom': ApiLuxurycarsShowroomLuxurycarsShowroom;
-      'api::test.test': ApiTestTest;
-      'api::testmeow.testmeow': ApiTestmeowTestmeow;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
