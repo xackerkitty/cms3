@@ -12,10 +12,12 @@
   "pluginOptions": {},
   "attributes": {
     "mainTitle": {
-      "type": "string"
+      "type": "string",
+      "default": "Defining the Lusso Standard"
     },
     "mainDesc": {
-      "type": "text"
+      "type": "text",
+      "default": "At Lusso, we don't just craft automobiles; we embody a philosophy of unparalleled quality, pioneering spirit, and an enduring commitment to luxury."
     },
     "cards": {
       "type": "component",
@@ -23,13 +25,16 @@
       "repeatable": true
     },
     "discoverTitle": {
-      "type": "string"
+      "type": "string",
+      "default": "An Experience Beyond Expectations"
     },
     "discoverP1": {
-      "type": "string"
+      "type": "string",
+      "default": "More than just a display space, our showroom is an architectural masterpiece, thoughtfully curated to reflect the prestige and innovation of every vehicle it houses. From the gleaming polished floors to the ambient, intelligent lighting, every element contributes to an atmosphere of exclusive sophistication."
     },
     "discoverp2": {
-      "type": "string"
+      "type": "string",
+      "default": "We've designed every corner to evoke a sense of wonder and comfort, inviting you to immerse yourself in dedicated zones for personalized consultations, unwind in our luxurious private lounges, and engage with dynamic interactive displays that bring the legacy and future of our automotive masterpieces to life. This is where dreams are realized."
     },
     "descriptionIMG": {
       "type": "media",

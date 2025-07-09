@@ -18,22 +18,27 @@
       "type": "text"
     },
     "addressTitle": {
-      "type": "string"
+      "type": "string",
+      "default": "Address"
     },
     "AddressDesc": {
-      "type": "text"
+      "type": "text",
+      "default": "274 Agmashenebeli Alley, Tbilisi 0159, Georgia."
     },
     "phoneTitle": {
-      "type": "string"
+      "type": "string",
+      "default": "Phone"
     },
     "phoneDesc": {
       "type": "text"
     },
     "emailTitle": {
-      "type": "string"
+      "type": "string",
+      "default": "Email"
     },
     "emailDesc": {
-      "type": "string"
+      "type": "string",
+      "default": "info@lussoluxurycar.com"
     }
   }
 }

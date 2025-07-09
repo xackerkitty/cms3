@@ -468,6 +468,35 @@ export interface ApiLuxurycarsAboutusLuxurycarsAboutus
   };
 }
 
+export interface ApiLuxurycarsCarLuxurycarsCar
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'luxurycars_cars';
+  info: {
+    displayName: 'luxurycars_car';
+    pluralName: 'luxurycars-cars';
+    singularName: 'luxurycars-car';
+  };
+  options: {
+    comment: '';
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::luxurycars-car.luxurycars-car'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLuxurycarsContactusLuxurycarsContactus
   extends Struct.SingleTypeSchema {
   collectionName: 'luxurycars_contactuses';
@@ -480,15 +509,18 @@ export interface ApiLuxurycarsContactusLuxurycarsContactus
     draftAndPublish: true;
   };
   attributes: {
-    AddressDesc: Schema.Attribute.Text;
-    addressTitle: Schema.Attribute.String;
+    AddressDesc: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'274 Agmashenebeli Alley, Tbilisi 0159, Georgia.'>;
+    addressTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Address'>;
     contactUsDesc: Schema.Attribute.Text;
     contactUsTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    emailDesc: Schema.Attribute.String;
-    emailTitle: Schema.Attribute.String;
+    emailDesc: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'info@lussoluxurycar.com'>;
+    emailTitle: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Email'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -496,8 +528,53 @@ export interface ApiLuxurycarsContactusLuxurycarsContactus
     > &
       Schema.Attribute.Private;
     phoneDesc: Schema.Attribute.Text;
-    phoneTitle: Schema.Attribute.String;
+    phoneTitle: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Phone'>;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLuxurycarsHomeLuxurycarsHome
+  extends Struct.SingleTypeSchema {
+  collectionName: 'luxurycars_homes';
+  info: {
+    displayName: 'luxurycars_home';
+    pluralName: 'luxurycars-homes';
+    singularName: 'luxurycars-home';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    aboutUsBackground: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    aboutusBtnText: Schema.Attribute.String;
+    aboutUsDesc: Schema.Attribute.Text;
+    aboutUsTitle: Schema.Attribute.String;
+    carImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    featuredCar: Schema.Attribute.Component<
+      'lc-home-featured-cars.featured-cars',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::luxurycars-home.luxurycars-home'
+    > &
+      Schema.Attribute.Private;
+    locationDesc: Schema.Attribute.Text;
+    locationTitle: Schema.Attribute.String;
+    mainBG: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    mainBtnText: Schema.Attribute.String;
+    mainTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    subTitle: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -526,9 +603,12 @@ export interface ApiLuxurycarsShowroomLuxurycarsShowroom
     descriptionIMG: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    discoverP1: Schema.Attribute.String;
-    discoverp2: Schema.Attribute.String;
-    discoverTitle: Schema.Attribute.String;
+    discoverP1: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'More than just a display space, our showroom is an architectural masterpiece, thoughtfully curated to reflect the prestige and innovation of every vehicle it houses. From the gleaming polished floors to the ambient, intelligent lighting, every element contributes to an atmosphere of exclusive sophistication.'>;
+    discoverp2: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<"We've designed every corner to evoke a sense of wonder and comfort, inviting you to immerse yourself in dedicated zones for personalized consultations, unwind in our luxurious private lounges, and engage with dynamic interactive displays that bring the legacy and future of our automotive masterpieces to life. This is where dreams are realized.">;
+    discoverTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'An Experience Beyond Expectations'>;
     galleryCards: Schema.Attribute.Component<
       'lc-au-cards.gallery-image-cards',
       false
@@ -539,8 +619,10 @@ export interface ApiLuxurycarsShowroomLuxurycarsShowroom
       'api::luxurycars-showroom.luxurycars-showroom'
     > &
       Schema.Attribute.Private;
-    mainDesc: Schema.Attribute.Text;
-    mainTitle: Schema.Attribute.String;
+    mainDesc: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<"At Lusso, we don't just craft automobiles; we embody a philosophy of unparalleled quality, pioneering spirit, and an enduring commitment to luxury.">;
+    mainTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Defining the Lusso Standard'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1112,7 +1194,9 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::company.company': ApiCompanyCompany;
       'api::luxurycars-aboutus.luxurycars-aboutus': ApiLuxurycarsAboutusLuxurycarsAboutus;
+      'api::luxurycars-car.luxurycars-car': ApiLuxurycarsCarLuxurycarsCar;
       'api::luxurycars-contactus.luxurycars-contactus': ApiLuxurycarsContactusLuxurycarsContactus;
+      'api::luxurycars-home.luxurycars-home': ApiLuxurycarsHomeLuxurycarsHome;
       'api::luxurycars-showroom.luxurycars-showroom': ApiLuxurycarsShowroomLuxurycarsShowroom;
       'api::test.test': ApiTestTest;
       'api::testmeow.testmeow': ApiTestmeowTestmeow;

@@ -1,0 +1,14 @@
+
+{
+  "kind": "collectionType",
+  "collectionName": "luxurycars_cars",
+  "info": {
+    "singularName": "luxurycars-car",
+    "pluralName": "luxurycars-cars",
+    "displayName": "luxurycars_car"
+  },
+  "options": {
+    "comment": ""
+  },
+  "attributes": {}
+}

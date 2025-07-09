@@ -1,0 +1,14 @@
+
+{
+  "kind": "collectionType",
+  "collectionName": "testmeows",
+  "info": {
+    "singularName": "testmeow",
+    "pluralName": "testmeows",
+    "displayName": "testmeow"
+  },
+  "options": {
+    "comment": ""
+  },
+  "attributes": {}
+}

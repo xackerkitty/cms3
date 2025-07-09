@@ -1,0 +1,74 @@
+{
+  "kind": "singleType",
+  "collectionName": "luxurycars_homes",
+  "info": {
+    "singularName": "luxurycars-home",
+    "pluralName": "luxurycars-homes",
+    "displayName": "luxurycars_home"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "mainBtnText": {
+      "type": "string"
+    },
+    "mainBG": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "featuredCar": {
+      "type": "component",
+      "component": "lc-home-featured-cars.featured-cars",
+      "repeatable": true
+    },
+    "aboutUsTitle": {
+      "type": "string"
+    },
+    "aboutUsDesc": {
+      "type": "text"
+    },
+    "aboutusBtnText": {
+      "type": "string"
+    },
+    "carImg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "aboutUsBackground": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "locationTitle": {
+      "type": "string"
+    },
+    "locationDesc": {
+      "type": "text"
+    }
+  }
+}
