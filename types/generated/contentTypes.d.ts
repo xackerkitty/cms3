@@ -504,6 +504,50 @@ export interface ApiLuxurycarsContactusLuxurycarsContactus
   };
 }
 
+export interface ApiLuxurycarsShowroomLuxurycarsShowroom
+  extends Struct.SingleTypeSchema {
+  collectionName: 'luxurycars_showrooms';
+  info: {
+    displayName: 'luxurycars_showroom';
+    pluralName: 'luxurycars-showrooms';
+    singularName: 'luxurycars-showroom';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<
+      'luxurycars-s-rcard.showroom-cards',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    descriptionIMG: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    discoverP1: Schema.Attribute.String;
+    discoverp2: Schema.Attribute.String;
+    discoverTitle: Schema.Attribute.String;
+    galleryCards: Schema.Attribute.Component<
+      'lc-au-cards.gallery-image-cards',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::luxurycars-showroom.luxurycars-showroom'
+    > &
+      Schema.Attribute.Private;
+    mainDesc: Schema.Attribute.Text;
+    mainTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTestTest extends Struct.SingleTypeSchema {
   collectionName: 'tests';
   info: {
@@ -1069,6 +1113,7 @@ declare module '@strapi/strapi' {
       'api::company.company': ApiCompanyCompany;
       'api::luxurycars-aboutus.luxurycars-aboutus': ApiLuxurycarsAboutusLuxurycarsAboutus;
       'api::luxurycars-contactus.luxurycars-contactus': ApiLuxurycarsContactusLuxurycarsContactus;
+      'api::luxurycars-showroom.luxurycars-showroom': ApiLuxurycarsShowroomLuxurycarsShowroom;
       'api::test.test': ApiTestTest;
       'api::testmeow.testmeow': ApiTestmeowTestmeow;
       'plugin::content-releases.release': PluginContentReleasesRelease;

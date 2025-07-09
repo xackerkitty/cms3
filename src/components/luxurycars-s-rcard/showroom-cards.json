@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_luxurycars_s_rcard_showroom_cards",
+  "info": {
+    "displayName": "Showroom cards"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

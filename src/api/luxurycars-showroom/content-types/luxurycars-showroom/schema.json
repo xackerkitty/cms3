@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "luxurycars_showrooms",
+  "info": {
+    "singularName": "luxurycars-showroom",
+    "pluralName": "luxurycars-showrooms",
+    "displayName": "luxurycars_showroom"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "mainDesc": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "component": "luxurycars-s-rcard.showroom-cards",
+      "repeatable": true
+    },
+    "discoverTitle": {
+      "type": "string"
+    },
+    "discoverP1": {
+      "type": "string"
+    },
+    "discoverp2": {
+      "type": "string"
+    },
+    "descriptionIMG": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "galleryCards": {
+      "type": "component",
+      "component": "lc-au-cards.gallery-image-cards",
+      "repeatable": false
+    }
+  }
+}

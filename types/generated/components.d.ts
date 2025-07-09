@@ -13,6 +13,20 @@ export interface ContactInfoContactInfo extends Struct.ComponentSchema {
   };
 }
 
+export interface LcAuCardsGalleryImageCards extends Struct.ComponentSchema {
+  collectionName: 'components_lc_au_cards_gallery_image_cards';
+  info: {
+    displayName: 'Gallery image cards';
+    icon: 'priceTag';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    spanColums: Schema.Attribute.Integer;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface LcAuOurValuesAboutUsValues extends Struct.ComponentSchema {
   collectionName: 'components_lc_au_our_values_about_us_values';
   info: {
@@ -37,12 +51,25 @@ export interface LcAuWhyUsAboutUsWhyChooseUs extends Struct.ComponentSchema {
   };
 }
 
+export interface LuxurycarsSRcardShowroomCards extends Struct.ComponentSchema {
+  collectionName: 'components_luxurycars_s_rcard_showroom_cards';
+  info: {
+    displayName: 'Showroom cards';
+  };
+  attributes: {
+    Description: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'contact-info.contact-info': ContactInfoContactInfo;
+      'lc-au-cards.gallery-image-cards': LcAuCardsGalleryImageCards;
       'lc-au-our-values.about-us-values': LcAuOurValuesAboutUsValues;
       'lc-au-why-us.about-us-why-choose-us': LcAuWhyUsAboutUsWhyChooseUs;
+      'luxurycars-s-rcard.showroom-cards': LuxurycarsSRcardShowroomCards;
     }
   }
 }
