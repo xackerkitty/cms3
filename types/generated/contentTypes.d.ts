@@ -414,6 +414,38 @@ export interface ApiCompanyCompany extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiLuxurycarLuxurycar extends Struct.SingleTypeSchema {
+  collectionName: 'luxurycars';
+  info: {
+    displayName: 'luxurycar';
+    pluralName: 'luxurycars';
+    singularName: 'luxurycar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bigLogo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::luxurycar.luxurycar'
+    > &
+      Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLuxurycarsAboutusLuxurycarsAboutus
   extends Struct.SingleTypeSchema {
   collectionName: 'luxurycars_aboutuses';
@@ -665,6 +697,7 @@ export interface ApiLuxurycarsShowroomLuxurycarsShowroom
       'api::luxurycars-showroom.luxurycars-showroom'
     > &
       Schema.Attribute.Private;
+    mainBG: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     mainDesc: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<"At Lusso, we don't just craft automobiles; we embody a philosophy of unparalleled quality, pioneering spirit, and an enduring commitment to luxury.">;
     mainTitle: Schema.Attribute.String &
@@ -1186,6 +1219,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::company.company': ApiCompanyCompany;
+      'api::luxurycar.luxurycar': ApiLuxurycarLuxurycar;
       'api::luxurycars-aboutus.luxurycars-aboutus': ApiLuxurycarsAboutusLuxurycarsAboutus;
       'api::luxurycars-car.luxurycars-car': ApiLuxurycarsCarLuxurycarsCar;
       'api::luxurycars-contactus.luxurycars-contactus': ApiLuxurycarsContactusLuxurycarsContactus;

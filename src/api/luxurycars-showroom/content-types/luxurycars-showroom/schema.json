@@ -19,6 +19,16 @@
       "type": "text",
       "default": "At Lusso, we don't just craft automobiles; we embody a philosophy of unparalleled quality, pioneering spirit, and an enduring commitment to luxury."
     },
+    "mainBG": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "cards": {
       "type": "component",
       "component": "luxurycars-s-rcard.showroom-cards",
