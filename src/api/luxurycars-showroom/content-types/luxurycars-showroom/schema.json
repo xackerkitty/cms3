@@ -59,7 +59,7 @@
     "galleryCards": {
       "type": "component",
       "component": "lc-au-cards.gallery-image-cards",
-      "repeatable": false
+      "repeatable": true
     }
   }
 }

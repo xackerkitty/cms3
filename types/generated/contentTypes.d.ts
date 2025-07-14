@@ -689,7 +689,7 @@ export interface ApiLuxurycarsShowroomLuxurycarsShowroom
       Schema.Attribute.DefaultTo<'An Experience Beyond Expectations'>;
     galleryCards: Schema.Attribute.Component<
       'lc-au-cards.gallery-image-cards',
-      false
+      true
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
