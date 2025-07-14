@@ -55,6 +55,13 @@
         "videos",
         "audios"
       ]
+    },
+    "mainWebLink": {
+      "type": "enumeration",
+      "enum": [
+        "mainweb",
+        "luxurycars"
+      ]
     }
   }
 }
