@@ -406,7 +406,9 @@ export interface ApiCompanyCompany extends Struct.CollectionTypeSchema {
     >;
     mainDesc: Schema.Attribute.Text;
     mainTitle: Schema.Attribute.String;
-    mainWebLink: Schema.Attribute.Enumeration<['mainweb', 'luxurycars']>;
+    mainWebLink: Schema.Attribute.Enumeration<
+      ['nothing', 'mainweb', 'luxurycars']
+    >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'companyName'>;
     updatedAt: Schema.Attribute.DateTime;

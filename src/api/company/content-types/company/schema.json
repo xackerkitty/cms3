@@ -59,6 +59,7 @@
     "mainWebLink": {
       "type": "enumeration",
       "enum": [
+        "nothing",
         "mainweb",
         "luxurycars"
       ]
