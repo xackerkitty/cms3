@@ -7,24 +7,48 @@
     "displayName": "luxurycars_home"
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "mainTitle": {
       "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "default": "Welcome to "
     },
     "subTitle": {
       "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "default": "Experience the Pinnnnnnacle of Luxury"
     },
     "mainBtnText": {
       "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "default": "Learn more"
     },
     "mainBG": {
       "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "multiple": false,
       "allowedTypes": [
         "images",
@@ -35,23 +59,48 @@
     },
     "featuredCar": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "lc-home-featured-cars.featured-cars",
       "repeatable": true
     },
     "aboutUsTitle": {
       "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "default": "About Us"
     },
     "aboutUsDesc": {
       "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "default": "We are a group of skilled automotive professionals who are car enthusiasts and creatives, and we specialize in helping you as a customer with a comprehensive understanding of all questions related to cars. For the selection of a new car insurance policy or appropriate financing, you can always contact us"
     },
     "aboutusBtnText": {
       "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "default": "Get To Know Us"
     },
     "carImg": {
       "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "multiple": false,
       "allowedTypes": [
         "images",
@@ -62,6 +111,11 @@
     },
     "aboutUsBackground": {
       "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "multiple": false,
       "allowedTypes": [
         "images",
@@ -72,10 +126,20 @@
     },
     "locationTitle": {
       "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "default": "Find Us Here!"
     },
     "locationDesc": {
       "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "default": "274 David Agmashenebeli Alley 41, Tbilisi 0131"
     }
   }
